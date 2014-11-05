@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- inject the CopyEyeXDll target into the linking build step -->
+  <PropertyGroup>
+    <BuildLinkAction>$(BuildLinkAction);CopyEyeXDllToOutputDirectory</BuildLinkAction>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EyeXDllName>Tobii.EyeX.Client.dll</EyeXDllName>
+    <EyeXDllPath Condition=" '$(Platform)' == 'x64' ">..\..\lib\x64\$(EyeXDllName)</EyeXDllPath>
+    <EyeXDllPath Condition=" '$(Platform)' != 'x64' ">..\..\lib\x86\$(EyeXDllName)</EyeXDllPath>
+  </PropertyGroup>
+
+  <Target Name="CopyEyeXDllToOutputDirectory" Inputs="$(EyeXDllPath)" Outputs="$(OutDir)\$(EyeXDllName)">
+    <Copy SourceFiles="$(EyeXDllPath)" DestinationFolder="$(OutDir)" />
+  </Target>
+
+</Project>
