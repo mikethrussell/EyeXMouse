@@ -19,9 +19,12 @@ Purchase a Tobii EyeX development kit for £72.99 (inc. delivery) from http://ww
 
 
 
-CREDIT:
+##Credit
 
 https://github.com/gigertron/EyeTracker
 
-http://developer.tobii.com/community/forums/topic/gaming-and-desktop-mouse-control-with-the-rex/
+http://developer.tobii.com/community/forums/topic/gaming-and-desktop-mouse-control-with-the-rex
 
+
+## License
+Code is under the [GPLv3 license] (https://github.com/mikethrussell/EyeXMouse/blob/master/LICENSE.txt).
